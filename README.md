@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/berkurka/blog_mega_sena/blob/master/images/lottery-3846567_1920.jpg)
+![ ](https://user-images.githubusercontent.com/44925804/50568927-607a6e00-0d28-11e9-8023-ed5f33346748.jpg)
 # Mega Sena Statistics: 
 
 ### Overview
