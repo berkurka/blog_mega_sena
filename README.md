@@ -1,55 +1,46 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 3: 
+![alt text](https://raw.githubusercontent.com/berkurka/blog_mega_sena/blob/master/images/lottery-3846567_1920.jpg)
+# Mega Sena Statistics: 
 
 ### Overview
 
-Creating a classification model to predict which subreddit a post belongs to.
-Used Honda and Toyota subbreddit.
+Creating statistics on 'Mega-Sena' lottery results.
 
-Work is devided in 3 noteboos:
-
-1. DataScraping.ipynb
-     Scraping data from sub reddit Api convert into a pandas data frame and creates csv files.
-2. EDA.ipynb
-     Describing data, generating histogram, scatter and correlation heatmap plots.
-3. Feature_eng_and_Model.ipynb
-     Creating dummies, engineering new features, scale data, spliting data in train and test data frames.
-     Fitting data in model, scoring model, and ploting predictions and errors.
 ### Methods
- - Statistic data description using Pandas,Numpy,wordcloud, librarys in Python.
- - Text columns were transformed using PorterStemmer, LancasterStemmer and WordNetLemmatize from nltk library.
+ - Data cleaning , EDA and Statistic was made using Pandas and Numpy librarys in Python.
+ - Plots using matplotlib.pyplot library.
  - Words were tokenized using CountVectorize from sklearn library 
- - Data was slpit in 25% test and 75% train subsets. 
- - Multinomial Naive Bayes, Random Trees, Extra Trees and Bagging with Decision Tree models where used.
 ### Results
- - The Random Forest Cassifier had a 92% accuracy in train set and 77% accuracy in test and 76% cross validation after hyperparameter tuning.
- - Car names were the words with most impact in this model´s classification process.
+ - Numbers 10, 5, 53, 4, 23 where the most frequent.
+ - Numbers 9, 22, 55, 21, 26 where the less frequent.
+ - Even and Odd numbers almost had the same frequency (50.4 and 49.6 respectively).
+ - Numbers from 1-10 are present in 17.02% of draws (highest).
+ - Numbers from 21-30 are present in 16.34% of draws(lowest).
+ - Number combination 29,38,50 was present in 8 draws.(highest)
+ 
 ### Softwares Used
 - Jupyter notebook
 - Python 3.6
 - Powerpoint
+
+### Notebooks:
+
+1. mega_sena.ipynb
+
 ### Datasets
 
-#### Data source:
+[Mega-Sena results](https://campograndesantos.wordpress.com/64-concurso-da-mega-senatodos-os-resultados/)
 
-[Toyota subreddit](https://www.reddit.com/r/Toyota/)
 
-[Honda subreddit](https://www.reddit.com/r/Honda/)
+#### Data Dictionary
 
-#### Features dictionary before tokenizing
-
-|Feature|Type|Description|
+|Label|Type|Description|
 |---|---|---|
-|title|object|Subreddit title text.|
-|selftext|object|Subreddit body text.|
-|ups|int64|Number of ups in subreddit post.|
-|num_comments|int64|Number of comments in subreddit post.|
-|author|object|Subreddit post Author name.|
-|label|int64|Predicted column, 1 if Honda.|
-|clean_title|object|Title after removing english stop words, double space and special characters.|
-|clean_selftext|object|Body after removing english stop words, double space and special characters.|
-|clean_title_lemmat|object|Clean title column after using WordNetLemmatizer.|
-|clean_title_lancast|object|Clean title column after using LancasterStemmer.|
-|clean_title_port|object|Clean title column after using PorterStemmer.|
-|clean_selftext_lemmat|object|Clean body column after using WordNetLemmatizer.|
-|clean_selftext_lancast|object|Clean body column after using LancasterStemmer.|
-|clean_selftext_port|object|Clean body column after using PorterStemmer.|
+|draw|int64|Number of the draw|
+|data|object|Date of the draw (dd/MM/YYYY)|
+|num1|int64|1st winning number in the draw|
+|num2|int64|2st winning number in the draw|
+|num3|int64|3st winning number in the draw|
+|num4|int64|4st winning number in the draw|
+|num5|int64|5st winning number in the draw|
+|num6|int64|6st winning number in the draw|
+|is_even|int64|Dummy: 1 for even, 0 for odd|
